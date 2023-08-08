@@ -1,0 +1,8 @@
+.display {
+  border: 1px solid;
+  text-align: end;
+  padding: 1rem;
+  margin-bottom: 0;
+  background-color: gray;
+  color: aliceblue;
+}

@@ -1,0 +1,28 @@
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btnContainer > button {
+  padding: 1rem;
+  background-color: lightgrey;
+  border: 1px solid rgb(184, 182, 182);
+}
+
+.btnContainer > button:active {
+  background-color: gray;
+}
+
+.btnContainer > button:nth-child(17) {
+  grid-column: 1/span 2;
+}
+
+.btnContainer > button:nth-child(4n),
+.btnContainer > button:last-child {
+  background-color: orange;
+}
+
+.btnContainer > button:active:nth-child(4n),
+.btnContainer > button:active:last-child {
+  background-color: rgb(185, 122, 4);
+}
