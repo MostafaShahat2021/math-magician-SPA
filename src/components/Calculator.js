@@ -1,3 +1,4 @@
+import './calculator.css';
 import Display from './Display';
 import BtnContainer from './BtnContainer';
 
