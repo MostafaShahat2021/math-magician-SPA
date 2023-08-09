@@ -18,7 +18,7 @@ function CalcContainer() {
     calculateObj.next = next;
     calculateObj.operation = operation;
     if (calculateObj.total || calculateObj.next) {
-      setRes(calculateObj.total ? calculateObj.total : calculateObj.next);
+      setRes(calculateObj.next ? calculateObj.next : calculateObj.total);
     } else {
       setRes('0');
     }
