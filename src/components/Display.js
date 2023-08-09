@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import './display.css';
 
-function Display() {
-  return (
-    <p className="display">0</p>
-  );
+function Display({ result }) {
+  return <p className="display">{result}</p>;
 }
-
+Display.propTypes = {
+  result: PropTypes.string.isRequired,
+};
 export default Display;
