@@ -5,6 +5,7 @@ function Quote() {
   const [quote, setQuote] = useState(null);
   const [loading, setLoading] = useState(true);
   const [errMsg, setErrMsg] = useState(null);
+  const [author, setAuthor] = useState(null);
 
   useEffect(() => {
     let isMountd = true;
@@ -29,6 +30,7 @@ function Quote() {
       .then((data) => {
         if (isMountd) {
           setQuote(data[0].quote);
+          setAuthor(data[0].author);
           setLoading(false);
           setErrMsg(null);
         }
@@ -36,6 +38,7 @@ function Quote() {
       .catch((err) => {
         if (isMountd) {
           setQuote(null);
+          setAuthor(null);
           setLoading(false);
           setErrMsg(err.message);
         }
@@ -48,7 +51,15 @@ function Quote() {
   return (
     <div className="quote">
       {loading && <div>Loading...</div>}
-      {quote && <div>{quote}</div>}
+      {quote && (
+      <div>{quote}</div>
+      )}
+      {author && (
+      <div>
+        <span>By : </span>
+        {author}
+      </div>
+      )}
       {errMsg && <div>{errMsg}</div>}
     </div>
   );
