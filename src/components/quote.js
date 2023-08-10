@@ -7,11 +7,17 @@ function Quote() {
   const [errMsg, setErrMsg] = useState(null);
 
   useEffect(() => {
+    let isMountd = true;
+    const API_KEY = 'RdZd0Xsx4bF/bK+ewY35lg==Gp1zeP14QV1BrS8W';
+
     const fitchQuotes = async () => {
-      const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=hope', {
-        headers: { 'X-Api-Key': 'RdZd0Xsx4bF/bK+ewY35lg==Gp1zeP14QV1BrS8W' },
-        contentType: 'application/json',
-      });
+      const res = await fetch(
+        'https://api.api-ninjas.com/v1/quotes?category=inspirational',
+        {
+          headers: { 'X-Api-Key': API_KEY },
+          contentType: 'application/json',
+        },
+      );
 
       if (!res.ok) {
         throw Error("Couldn't retrieve data");
@@ -19,15 +25,24 @@ function Quote() {
       return res.json();
     };
 
-    fitchQuotes().then((data) => {
-      setQuote(data[0].quote);
-      setLoading(false);
-      setErrMsg(null);
-    }).catch((err) => {
-      setQuote(null);
-      setLoading(false);
-      setErrMsg(err.message);
-    });
+    fitchQuotes()
+      .then((data) => {
+        if (isMountd) {
+          setQuote(data[0].quote);
+          setLoading(false);
+          setErrMsg(null);
+        }
+      })
+      .catch((err) => {
+        if (isMountd) {
+          setQuote(null);
+          setLoading(false);
+          setErrMsg(err.message);
+        }
+      });
+    return () => {
+      isMountd = false;
+    };
   }, []);
 
   return (
