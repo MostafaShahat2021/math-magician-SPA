@@ -3,7 +3,6 @@ import './calculator.css';
 import calculate from '../logic/calculate';
 import Display from './Display';
 import BtnContainer from './BtnContainer';
-import Quote from './quote';
 
 const calculateObj = {
   total: null,
@@ -26,7 +25,6 @@ function CalcContainer() {
   };
   return (
     <div className="calcContainer">
-      <Quote />
       <Display result={res} />
       <BtnContainer handelClick={handelClick} />
     </div>

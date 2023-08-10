@@ -32,7 +32,7 @@ function Quote() {
 
   return (
     <div className="quote">
-      {loading && <div>Loading</div>}
+      {loading && <div>Loading...</div>}
       {quote && <div>{quote}</div>}
       {errMsg && <div>{errMsg}</div>}
     </div>
