@@ -3,3 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.App {
+  padding-top: 15rem;
+  padding-bottom: 14.3rem;
+  display: flex;
+  justify-content: space-around;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
