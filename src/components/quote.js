@@ -3,6 +3,8 @@ import './quote.css';
 
 function Quote() {
   const [quote, setQuote] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [errMsg, setErrMsg] = useState(null);
 
   useEffect(() => {
     const fitchQuotes = async () => {
@@ -19,15 +21,20 @@ function Quote() {
 
     fitchQuotes().then((data) => {
       setQuote(data[0].quote);
-      // console.log(quote);
+      setLoading(false);
+      setErrMsg(null);
     }).catch((err) => {
-      console.log(err);
+      setQuote(null);
+      setLoading(false);
+      setErrMsg(err.message);
     });
   }, []);
 
   return (
     <div className="quote">
-      {quote && <div>{quote}</div>}
+      {loading && <div>Loading</div>}
+      {quote && <dive>{quote}</dive>}
+      {errMsg && <div>{errMsg}</div>}
     </div>
   );
 }
