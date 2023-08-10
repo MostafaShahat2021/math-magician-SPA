@@ -33,7 +33,7 @@ function Quote() {
   return (
     <div className="quote">
       {loading && <div>Loading</div>}
-      {quote && <dive>{quote}</dive>}
+      {quote && <div>{quote}</div>}
       {errMsg && <div>{errMsg}</div>}
     </div>
   );
