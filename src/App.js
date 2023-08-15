@@ -4,10 +4,12 @@ import './App.css';
 import CalcContainer from './components/Calculator';
 import Quote from './components/quote';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quote />} />

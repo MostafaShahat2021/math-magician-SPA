@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  border-right: 1px solid black;
+  padding-right: 1rem;
+  margin: 1rem;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: rgb(81, 178, 182);
+  border-right: 1px solid black;
+  text-decoration: underline;
+}
