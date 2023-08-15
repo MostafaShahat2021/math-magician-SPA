@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App {
+body {
+  background-color: bisque;
+}
+
+.app {
   padding-top: 15rem;
   padding-bottom: 14.3rem;
   display: flex;
@@ -12,4 +19,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.calc-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  color: rgb(81, 178, 182);
 }
