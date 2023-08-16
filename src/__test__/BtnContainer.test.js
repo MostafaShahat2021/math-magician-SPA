@@ -1,5 +1,5 @@
-import { render, fireEvent} from "@testing-library/react";
-import BtnContainer from "../components/BtnContainer";
+import { render, fireEvent } from '@testing-library/react';
+import BtnContainer from '../components/BtnContainer';
 
 it('should renders all buttons', () => {
   let btnClick = '';
