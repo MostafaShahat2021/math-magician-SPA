@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`.. 1`] = `
+exports[`Calculator component rending test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
