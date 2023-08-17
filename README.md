@@ -59,6 +59,9 @@
 
 <!-- LIVE DEMO -->
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://math-magicians-aljo.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
