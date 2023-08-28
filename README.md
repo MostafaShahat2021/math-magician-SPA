@@ -110,7 +110,7 @@ You can deploy this project using:
 👤 **Mostafa Shahat**
 
 - GitHub: [@MostafaShahat2021](https://github.com/MostafaShahat2021)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mostafa-shahat-a75810208/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mostafa-shahat/)
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
